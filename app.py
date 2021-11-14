@@ -1,15 +1,18 @@
 from flask import Flask, make_response, request
 from functions import *
 import json
+import sys
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def update_dns():
-    with open('config.json') as config_file:
+    with open(sys.path[0] + 'config.json') as config_file:
         config_data = json.load(config_file)
 
+    if request.authorization:
+        print(request.authorization)
     # Check for basic authentication headers
     if request.authorization and \
             request.authorization.username == config_data['webhook']['username'] \
