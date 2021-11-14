@@ -27,3 +27,6 @@ htmlcov/
 
 # Configuration file
 config.json
+
+# WSGI file
+run.wsgi
