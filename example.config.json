@@ -1,0 +1,13 @@
+{
+  "webhook":
+  {
+    "username": "",
+    "password": ""
+  },
+  "linode": {
+    "token": "",
+    "domain": "",
+    "record": "",
+    "ttl": 300
+  }
+}
